@@ -414,3 +414,348 @@ console.log(drinks);
 const bill = 175
 const tip = bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.2;
 console.log(`The bill was ${bill}, the tip was ${tip}, and the total value was ${bill + tip}`);
+
+//Chủ đề 1: Cơ bản
+// Kích thước hình vuông
+const canh = 5;
+const chuViHv = canh * 4;
+const dienTichHv = canh * canh;
+console.log(chuViHv);
+console.log(dienTichHv);
+
+// Kích thước hình chữ nhật
+const dai = 7;
+const rong = 3;
+const chuViHcn = (dai + rong) * 2;
+const dienTichHcn = dai * rong;
+console.log(chuViHcn);
+console.log(dienTichHcn);
+// Tổng n + nn + nnn
+let n = 8;
+let nn = 18;
+let nnn = 101;
+console.log(n + nn + nnn);
+
+// Số ngẫu nhiên(Làm tròn số): 
+// https://viblo.asia/p/javascript-mathrandom-co-thuc-su-la-random-63vKj9N652R
+// https://anonystick.com/blog-developer/tips-mathrandom-in-javascript-2020042458103007
+
+console.log(Math.random()); //random giữa 0 và 1 số thực
+console.log(Math.random() * 10) //random giữa 0 và 10 số thực
+
+// Hàm toán học
+let a = 15;
+let b = 8;
+const ketQuaCong = a + b;
+const ketQuaTru = a - b;
+const ketQuaNhan = a * b;
+const ketQuaChiaLayDu = a / b;
+const ketQuaChialayNguyen = a % b;
+console.log(ketQuaCong);
+console.log(ketQuaTru);
+console.log(ketQuaNhan);
+console.log(ketQuaChiaLayDu);
+console.log(ketQuaChialayNguyen);
+
+// Điểm số trung bình
+let diemToan =  8.4;
+let diemVan =  7.8;
+let diemAnh = 9.1;
+const diemTrungBinhHK = (diemToan + diemVan + diemAnh) / 3;
+const diemTrungBinhTatCaHK = (diemToan * 2 + diemVan * 2 + diemAnh) / 5 ;
+console.log(diemTrungBinhHK);
+console.log(diemTrungBinhTatCaHK);
+
+// Số lớn nhất trong 3 số
+// https://anonystick.com/blog-developer/tim-gia-tri-max-trong-array-of-objects-hoc-javascript-thuc-chien-2022082634298808
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max
+// https://laptrinhcanban.com/javascript/javascript-co-ban-den-nang-cao/mang-trong-javascript/tim-max-va-min-trong-mang-javascript/
+
+const diem = [
+  {name: 'Thi', diem: 10 },
+  {name: 'Thanh', diem: 9 },
+  {name: 'Dat', dime: 5 },
+  {name: 'Bao', diem: 7 },
+  {name: 'Bu', diem: 4.5 },
+  {name: 'Longct', diem: 8 },
+  {name: 'Manh', diem: 6 },
+  {name: 'LongBeo', diem: 5 }
+];
+// 1: tìm số lớn nhất
+//Dùng forEach 
+let max = 0;
+diem.forEach((user) => {
+  if (user.diem > max) {
+    max = user.diem;
+  }
+});
+
+console.log(`diem cao nhat: ${max}`);
+// 2: tìm số nhỏ nhất
+let min = 0;
+diem.forEach((user) => {
+  if (user.diem < min) {
+    min = user.diem;
+  }
+});
+// 3: tìm số thứ 3
+// 4: tìm số thứ 5
+
+
+//Chủ đề 2: Câu điều kiện
+
+// Số nguyên âm dương, chẵn lẻ
+//nguyên âm/dương
+const soNgauNhienAmDuong = 12;
+if(soNgauNhienAmDuong > 0) {
+  console.log(`${soNgauNhienAmDuong} là số dương`);
+}
+else {
+  console.log(`${soNgauNhienAmDuong} là số âm`);
+}
+
+//chẵn lẻ
+const soNgauNhienChanLe = 18;
+if(soNgauNhienChanLe % 2 === 0) {
+  console.log(`${soNgauNhienChanLe} là số chẵn`);
+}
+else {
+  console.log(`${soNgauNhienChanLe} là số lẻ`);
+}
+
+//nguyên âm/dương, chẵn/lẻ
+const soNgauNhien = 7;
+if(soNgauNhien > 0 && soNgauNhien % 2 === 0) {
+  console.log(`${soNgauNhien} là số nguyên dương chẵn`);
+}
+else if(soNgauNhien > 0 && soNgauNhien % 2 !== 0) {
+  console.log(`${soNgauNhien} là số nguyên dương lẻ`);
+}
+else if(soNgauNhien < 0 && soNgauNhien % 2 === 0) {
+  console.log(`${soNgauNhien} là số nguyên âm chẵn`);
+}
+else if(soNgauNhien < 0 && soNgauNhien % 2 !== 0) {
+  console.log(`${soNgauNhien} là số nguyên âm lẻ`);
+}
+
+// Năm nhuận
+
+const nam2024 = 365;
+if(nam2024 === 366) {
+  console.log(`năm nay là năm nhuận: ${nam2024}`);
+}
+else {
+  console.log(`năm nay không phải năm nhuận: ${nam2024}`);
+}
+
+// Số ngày trong tháng
+
+// Phim thế giới lập trình
+
+// Máy tính đơn giản
+
+// Thu nhập của lập trình viên
+
+// Doanh số bán hàng
+
+//Chủ đề 3: Vòng lặp
+// Tính tổng các số từ 1 đến n
+// số lẻ
+
+// số chẵn
+
+// số thực
+
+// Bảng cửu chương
+
+// Dãy số chẵn
+
+// Số chia hết cho 13
+
+// Số nguyên tố
+
+// Đếm số chữ số
+
+// Tổng các chữ số
+
+// Số toàn chẵn
+
+// Số tiến
+
+//Chủ đề 4: Dãy số
+// Tổng F(n) = 1 + 2 + … + n
+
+// Tích F(n) = n x … x 2 x 1
+
+// Tổng tích F(n) = 1 + 1x2 + … + 1x2x…xn
+
+// Tổng bình phương F(n) = 1^2 + 2^2 + … + n^2
+
+// Tổng S(n) = n^2 + n^4 + … + n^2x
+
+// 1 ít bài tập bổ sung
+
+//Chủ đề 5: Ước số và bội số
+//Bội số
+
+//Ước số
+
+//Xác định tồn tại ước số
+
+//Xác định tồn tại bội số
+
+//Ước chung lớn nhất
+
+//Bội chung nhỏ nhất
+
+//Ước và bội chung
+
+//Thống kê ước số chẵn
+
+//Ước lẻ lớn nhất
+
+//Chủ đề 6: Tháp hình
+// Tháp hình tam giác cơ bản
+
+// Tháp hình tam giác dạng số
+
+// Tháp hình tam giác chẵn lẻ
+
+// Tháp hình tam giác số ngược
+
+// Tháp hình tam giác vuông phải
+
+// Tháp hình tam giác số ngược phải
+
+// Tháp hộp hai nửa tam giác đối xứng
+
+// Tháp hình hộp hai nửa tam giác đối xứng
+
+// Tháp hình hộp hai nửa tam giác đối xứng nghịch
+
+// Tháp hình tam giác cân số đối xứng
+
+// Tháp hình hộp chứa tam giác số đối xứng
+
+// Tháp hình hộp chứa tam giác số tăng dần
+
+// Tháp hình chữ Z
+
+// Tháp hình đồng hồ cát
+
+// Tháp hình hộp X
+
+// Tháp hình số tăng dần
+
+// Tháp hình hộp rỗng
+
+// Tháp hình tam giác dạng đường chéo số
+
+// Tháp hình Slash
+
+// Tháp hình mũ
+
+// Tháp hình tam giác vuông hai chữ số
+
+// Tháp hình thoi
+
+// Tháp hình cây thông Noel
+
+//Chủ đề 7: Sim điện thoại
+// Sim tứ quý
+
+// Sim ông địa
+
+// Sim thần tài
+
+// Sim tiến lên đơn
+
+// Sim ngũ quý
+
+// Sim lục quý
+
+//Chủ đề 8: Array: Mảng
+// Tổng và tổng chẵn lẻ
+
+// Số lớn nhất trong mảng
+
+// Mảng số đối xứng
+
+// Trung bình cộng các số chẵn ở vị trí lẻ
+
+// Phần tử tồn tại trong mảng
+
+// Phần tử là tổng 2 phần tử đứng kế
+
+// Kiểm tra mảng tăng dần
+
+// Thay thế phần tử bằng trị tuyệt đối
+
+// Thay thế phần tử bằng giá trị lớn nhất
+
+// Sinh viên có điểm cao nhất
+
+// Loại bỏ các phần tử âm
+
+//Chủ đề 9: String: Chuỗi
+// Chuỗi chứa số
+
+// Đếm số từ trong chuỗi
+
+// Chuẩn hóa chuỗi
+
+// Lọc số điện thoại
+
+// Chuyển nghịch hoa thường
+
+// Đường dẫn tập tin đơn giản
+
+// Phân tách chuỗi cơ bản
+
+// Trích xuất chuỗi theo điều kiện
+
+// Breadcrumb
+
+// Phân tách chuỗi nâng cao
+
+//Chủ đề 10: Tổng hợp
+// Thống kê ID
+
+// Trung bình cộng loại trừ max và min trong mảng
+
+// Phần tử lớn nhất và lớn nhì
+
+// Giải mã chuỗi sang thời gian
+
+// Vị trí xuất hiện của từ
+
+// Chuyển mảng thành chuỗi tăng dần
+
+// Giải mã chuỗi sang tên
+
+// Giải mã chuỗi sang mật thư dần
+
+// Chuyển số có 3 chữ số thành chữ
+
+// Tổng các chữ số
+
+// Sức mạnh của chuỗi
+
+// Khóa học dài nhất
+
+// Khóa học dài nhất nâng cao
+
+// Điểm thi cao nhất
+
+// Thống kê khóa học
+
+1
+let i = 100;
+while (i <= 200){
+  console.log(i)
+  i += 20
+}
+
+
+
+
